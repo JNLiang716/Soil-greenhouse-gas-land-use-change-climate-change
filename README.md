@@ -4,7 +4,7 @@ library(ggplot2)
 library(metafor)
 library(dplyr)
 
-data <- read.csv("N2O_20241015.csv")
+data <- read.csv("N2O.csv")
 max(data$effect_size)
 
 data$pooled_sd <- sqrt(((data$n_Control - 1) * data$SD_Control^2 + (data$n_treatment - 1) * data$SD_treatment^2) /
